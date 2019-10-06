@@ -1,10 +1,5 @@
 function driversWithRevenueOver(driver,revenue) {
-  var result = []
- for(var i = 0; i < driver.length; i++) {
-   if (driver.revenue > revenue)
-      result.add(driver)
- }
- return result;
+ return driver.filter((driver))
 }
 
 function driverNamesWithRevenueOver(driver, revenue) {
