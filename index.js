@@ -1,14 +1,9 @@
-function driversWithRevenueOver(driver,revenue) {
- return driver.filter((driver) => (driver.revenue > revenue))
+function driversWithRevenueOver(drivers,revenue) {
+ return drivers.filter((driver) => (driver.revenue > revenue))
 }
 
-function driverNamesWithRevenueOver(driver, revenue) {
-  var result = []
- for(var i = 0; i < driver.length; i++) {
-   if (driver.revenue > revenue)
-      result.add(driver.name)
- }
- return result;
+function driverNamesWithRevenueOver(drivers, revenue) {
+  return drivers.map((driver) => (driver.revenue > revenue ? driver.name : null))
 }
 
 function exactMatch(driver,attr) {
